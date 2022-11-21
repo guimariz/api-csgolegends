@@ -1,6 +1,5 @@
 package com.csgolegends.api.service;
 
-
 import com.csgolegends.api.model.Perfil;
 import com.csgolegends.api.repository.PerfilsRepository;
 import org.springframework.beans.factory.annotation.Autowired;

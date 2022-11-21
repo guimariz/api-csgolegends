@@ -1,6 +1,5 @@
 package com.csgolegends.api.model;
 
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -49,4 +48,5 @@ public class Perfil implements GrantedAuthority {
     public String getAuthority() {
         return this.nome;
     }
+    
 }

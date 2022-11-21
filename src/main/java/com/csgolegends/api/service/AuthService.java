@@ -1,6 +1,5 @@
 package com.csgolegends.api.service;
 
-
 import com.csgolegends.api.model.Usuario;
 import com.csgolegends.api.repositoryimpl.UsuarioRepositoryCustom;
 import com.csgolegends.api.util.NegocioException;
@@ -14,7 +13,6 @@ import java.util.Optional;
 
 @Service
 public class AuthService implements UserDetailsService {
-
 
     @Autowired
     UsuarioRepositoryCustom usuarioRepositoryCustom;
@@ -33,4 +31,5 @@ public class AuthService implements UserDetailsService {
         }
         throw new NegocioException("Dados Invalidos");
     }
+    
 }

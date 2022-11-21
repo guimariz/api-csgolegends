@@ -5,7 +5,7 @@ import javax.persistence.PersistenceContext;
 
 public class BaseEntityResource {
 
-
     @PersistenceContext
     public EntityManager em = this.em;
+    
 }

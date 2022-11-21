@@ -1,7 +1,5 @@
 package com.csgolegends.api.config;
 
-
-
 import com.csgolegends.api.repository.UsuarioRepository;
 import com.csgolegends.api.service.AuthService;
 import com.csgolegends.api.service.TokenService;
@@ -27,7 +25,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @ComponentScan
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-
     @Autowired
     private AuthService authService;
 
@@ -36,7 +33,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private UsuarioService usuarioService;
-
 
     @Override
     @Bean
@@ -63,7 +59,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().addFilterBefore(new AuthenticationTokenFilter(tokenService, usuarioService), UsernamePasswordAuthenticationFilter.class);
 
     }
-
 
     //Recursos estaticos
     @Override

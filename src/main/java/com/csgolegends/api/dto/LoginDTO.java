@@ -26,4 +26,5 @@ public class LoginDTO {
     public UsernamePasswordAuthenticationToken converter() {
         return new UsernamePasswordAuthenticationToken(this.login, this.senha);
     }
+    
 }

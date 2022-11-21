@@ -1,7 +1,5 @@
 package com.csgolegends.api.controller;
 
-
-
 import com.csgolegends.api.model.ProPlayer;
 import com.csgolegends.api.service.ProPlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,4 +21,5 @@ public class ProPlayerController {
     public List<ProPlayer> listarTodos() {
         return proPlayerService.listarTudo();
     }
+    
 }

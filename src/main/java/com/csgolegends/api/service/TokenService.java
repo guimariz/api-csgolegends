@@ -1,6 +1,5 @@
 package com.csgolegends.api.service;
 
-
 import com.csgolegends.api.dto.LoginDTO;
 import com.csgolegends.api.model.Usuario;
 import com.csgolegends.api.repositoryimpl.UsuarioRepositoryCustom;
@@ -18,7 +17,6 @@ public class TokenService {
     @Autowired
     private UsuarioRepositoryCustom usuarioRepositoryCustom;
 
-
     @Value("${forum.jwt.expiration}")
     private String expiration;
 
@@ -27,7 +25,6 @@ public class TokenService {
 
     @Autowired
     private UsuarioService usuarioService;
-
 
     public String gerarToken(Authentication authentication) {
         Usuario usuario = (Usuario) authentication.getPrincipal();
@@ -42,7 +39,6 @@ public class TokenService {
                 .signWith(SignatureAlgorithm.HS256, secret)
                 .compact();
     }
-
 
     public boolean isTokenValido(String token) {
         try {
@@ -59,4 +55,5 @@ public class TokenService {
         Claims claims = Jwts.parser().setSigningKey(this.secret).parseClaimsJws(token).getBody();
         return Integer.parseInt(claims.getSubject());
     }
+    
 }

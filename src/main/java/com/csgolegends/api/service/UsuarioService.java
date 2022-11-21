@@ -1,6 +1,5 @@
 package com.csgolegends.api.service;
 
-
 import com.csgolegends.api.model.Perfil;
 import com.csgolegends.api.model.Usuario;
 import com.csgolegends.api.repository.UsuarioRepository;
@@ -37,13 +36,10 @@ public class UsuarioService {
         return usuario;
     }
 
-
     public Usuario cadastrar(Usuario user) {
-
         Usuario usuario = validarCadastro(user);
         usuario = userRepository.save(user);
         return usuario;
-
     }
 
     public Usuario procurarPorUsername(String username) {
@@ -78,6 +74,6 @@ public class UsuarioService {
         user.setSenha(new BCryptPasswordEncoder().encode(user.getPassword()));
 
         return user;
-
     }
+
 }

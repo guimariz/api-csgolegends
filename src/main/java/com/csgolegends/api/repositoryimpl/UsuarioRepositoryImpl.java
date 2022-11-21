@@ -1,6 +1,5 @@
 package com.csgolegends.api.repositoryimpl;
 
-
 import com.csgolegends.api.model.Usuario;
 import com.csgolegends.api.util.BaseEntityResource;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,9 +8,6 @@ import javax.persistence.Query;
 import java.util.Date;
 
 public class UsuarioRepositoryImpl extends BaseEntityResource implements UsuarioRepositoryCustom  {
-
-
-
 
     @Override
     public boolean isUsernameCadastrado(Usuario usuario) {
@@ -82,6 +78,5 @@ public class UsuarioRepositoryImpl extends BaseEntityResource implements Usuario
         q.setParameter("id", id);
         q.executeUpdate();
     }
-
 
 }

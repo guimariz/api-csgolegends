@@ -1,6 +1,5 @@
 package com.csgolegends.api.controller;
 
-
 import com.csgolegends.api.dto.LoginDTO;
 import com.csgolegends.api.dto.TokenDto;
 import com.csgolegends.api.model.Usuario;
@@ -42,4 +41,5 @@ public class AuthController {
             return ResponseEntity.badRequest().build();
         }
     }
+    
 }

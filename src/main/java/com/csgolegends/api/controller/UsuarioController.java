@@ -14,10 +14,8 @@ import java.util.List;
 @RequestMapping(value = "/user")
 public class UsuarioController {
 
-
     @Autowired
     private UsuarioService userService;
-
 
     @Transactional
     @GetMapping(value = "/listarTodos")
@@ -35,10 +33,5 @@ public class UsuarioController {
     public ResponseEntity<Usuario> cadastrar (@Valid @RequestBody Usuario user ) {
         return ResponseEntity.ok(userService.cadastrar(user));
     }
-
-
-
-
-
 
 }

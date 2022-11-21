@@ -1,6 +1,5 @@
 package com.csgolegends.api.model;
 
-
 import javax.persistence.*;
 
 @Entity
@@ -63,4 +62,5 @@ public class ProPlayer {
     public void setKdJopgador(String kdJopgador) {
         this.kdJopgador = kdJopgador;
     }
+    
 }

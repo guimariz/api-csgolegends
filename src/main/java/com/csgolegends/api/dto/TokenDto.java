@@ -2,7 +2,6 @@ package com.csgolegends.api.dto;
 
 public class TokenDto {
 
-
     private String token;
     private String tipo;
 
@@ -26,4 +25,5 @@ public class TokenDto {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+    
 }
